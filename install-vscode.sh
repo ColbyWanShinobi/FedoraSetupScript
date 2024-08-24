@@ -18,7 +18,7 @@ for util in "${prereq_list[@]}";do
   fi
 done
 
-SETUP_PATH=${HOME}/Download/${APP_NAME}
+SETUP_PATH=${HOME}/Downloads/${APP_NAME}
 PACKAGE_PATH=${SETUP_PATH}/${APP_NAME}.${PACKAGE_TYPE}
 
 # Create setup directory
@@ -38,4 +38,3 @@ curl --location --silent --fail --show-error --output ${PACKAGE_PATH} ${DL_URL}
 # Install the package
 echo "Installing ${PACKAGE_PATH}"
 sudo dnf install -y ${PACKAGE_PATH}
-

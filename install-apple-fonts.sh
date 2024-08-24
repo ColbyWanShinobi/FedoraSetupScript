@@ -20,7 +20,7 @@ for util in "${prereq_list[@]}";do
   fi
 done
 
-SETUP_PATH=${HOME}/Download/${APP_NAME}
+SETUP_PATH=${HOME}/Downloads/${APP_NAME}
 
 # Create setup directory if not present
 if [ ! -d "${SETUP_PATH}" ]; then

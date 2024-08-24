@@ -13,7 +13,10 @@ dconf write /org/gnome/nautilus/preferences/show-image-thumbnails '"always"'
 dconf write /org/gnome/nautilus/preferences/show-create-link true
 
 # Allow location in weather applet
-dconf write org.gnome.shell.weather automatic-location true
+gsettings set org.gnome.shell.weather automatic-location true
+
+# Set GNOME to use imperial units by default
+gsettings set org.gnome.system.locale region 'en_US.UTF-8'
 
 # Enable maximize and minimize buttons and move them to the top left corner
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
@@ -26,5 +29,12 @@ gsettings set org.gnome.desktop.wm.preferences num-workspaces 1
 
 # Disable hot corner
 gsettings set org.gnome.desktop.interface enable-hot-corners false
+
+# Get the default profile ID
+PROFILE_ID=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
+
+# Set the terminal width and height
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$PROFILE_ID/ default-size-columns 185
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$PROFILE_ID/ default-size-rows 35
 
 #gnome-shell --replace &
