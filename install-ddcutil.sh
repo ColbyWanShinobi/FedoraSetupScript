@@ -3,15 +3,11 @@
 # Install ddcutil
 sudo dnf install -y ddcutil
 
+# Copy the udev rules file
+sudo cp ./etc/udev/rules.d/60-ddcutil-i2c.rules /etc/udev/rules.d/
+
 # Load the i2c-dev module
 sudo modprobe i2c-dev
-
-# Copy the udev rules file
-sudo cp /usr/share/ddcutil/data/60-ddcutil-i2c.rules /etc/udev/rules.d/
-
-# Uncomment the necessary lines in the udev rules file
-sudo sed -i 's/^# SUBSYSTEM=="i2c-dev"/SUBSYSTEM=="i2c-dev"/' /etc/udev/rules.d/60-ddcutil-i2c.rules
-sudo sed -i 's/^# KERNEL=="i2c-\[0-9\]\*, GROUP="i2c", MODE="0660"/KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"/' /etc/udev/rules.d/60-ddcutil-i2c.rules
 
 # Create the i2c group if it doesn't exist
 sudo groupadd --system i2c || true
