@@ -1,0 +1,3 @@
+sudo rpm-ostree kargs --append=acpi_enforce_resources=lax
+sudo rpm-ostree kargs --append=modprobe.it87.force_id=0x8628
+sudo modprobe it87 force_id=0x8628

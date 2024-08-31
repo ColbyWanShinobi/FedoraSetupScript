@@ -49,7 +49,7 @@ extlist=(
 "https://extensions.gnome.org/extension/6278/battery-usage-wattmeter/"
 "https://extensions.gnome.org/extension/6325/control-monitor-brightness-and-volume-with-ddcutil/"
 "https://extensions.gnome.org/extension/6655/openweather/"
-"https://extensions.gnome.org/extension/6949/moveclock/"
+"https://extensions.gnome.org/extension/2/move-clock/"
 "https://extensions.gnome.org/extension/744/hide-activities-button/"
 "https://extensions.gnome.org/extension/988/harddisk-led/"
 )
