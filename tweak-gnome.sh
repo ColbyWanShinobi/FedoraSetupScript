@@ -44,4 +44,6 @@ dconf write /org/gnome/shell/extensions/openweatherrefined/position-in-panel '"c
 dconf write /org/gnome/shell/extensions/openweatherrefined/show-comment-in-panel true
 dconf write /org/gnome/shell/extensions/notifications-alert/color '"rgb(51,209,122)"'
 
+gsettings set org.gnome.mutter experimental-features '["variable-refresh-rate"]'
+
 #gnome-shell --replace &
