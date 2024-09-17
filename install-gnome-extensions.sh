@@ -28,8 +28,7 @@ if [[ ${XDG_CURRENT_DESKTOP} != "ubuntu:GNOME" && ${XDG_CURRENT_DESKTOP} != "Uni
 fi
 
 extlist=(
-"https://extensions.gnome.org/extension/1112/screenshot-tool/"
-"https://extensions.gnome.org/extension/1125/github-notifications/"
+"https://extensions.gnome.org/extension/6868/screenshort-cut/"
 "https://extensions.gnome.org/extension/1386/notification-counter/"
 "https://extensions.gnome.org/extension/1460/vitals/"
 "https://extensions.gnome.org/extension/1484/do-not-disturb-time/"
