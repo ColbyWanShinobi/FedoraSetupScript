@@ -40,6 +40,7 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 
 dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position '"LEFT"'
 dconf write /org/gnome/shell/extensions/dash-to-dock/disable-overview-on-startup true
+dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed true
 dconf write /org/gnome/shell/extensions/openweatherrefined/position-in-panel '"center"'
 dconf write /org/gnome/shell/extensions/openweatherrefined/show-comment-in-panel true
 dconf write /org/gnome/shell/extensions/notifications-alert/color '"rgb(51,209,122)"'
@@ -47,3 +48,5 @@ dconf write /org/gnome/shell/extensions/notifications-alert/color '"rgb(51,209,1
 gsettings set org.gnome.mutter experimental-features '["variable-refresh-rate"]'
 
 #gnome-shell --replace &
+
+dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed true
