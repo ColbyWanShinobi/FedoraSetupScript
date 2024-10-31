@@ -29,7 +29,7 @@ if [ ! -d "${SETUP_PATH}" ]; then
 fi
 
 # Check to see if the AppleColorEmoji.ttf is already installed
-if [ -f "/usr/share/fonts/truetype/apple-emoji-linux/AppleColorEmoji.ttf" ];then
+if [ -f "$HOME/.local/share/fonts/truetype/apple-emoji-linux/AppleColorEmoji.ttf" ];then
   echo "AppleColorEmoji.ttf is already present. Skipping install."
 else
   # Download the file
@@ -37,9 +37,9 @@ else
   curl --location --silent --fail --show-error --output ${SETUP_PATH}/AppleColorEmoji.ttf ${EMOJI_URL}
   # Install the package
   echo "Installing ${SETUP_PATH}/AppleColorEmoji.ttf"
-  sudo mkdir -p /usr/share/fonts/truetype/apple-emoji-linux/
-  sudo cp ${SETUP_PATH}/AppleColorEmoji.ttf /usr/share/fonts/truetype/apple-emoji-linux/
-  sudo fc-cache -f -v
+  mkdir -p $HOME/.local/share/fonts/truetype/apple-emoji-linux/
+  cp ${SETUP_PATH}/AppleColorEmoji.ttf $HOME/.local/share/fonts/truetype/apple-emoji-linux/
+  fc-cache -f -v
 fi
 
 # SF Fonts
@@ -47,9 +47,9 @@ if [ -d "${SETUP_PATH}/sfwin" ]; then
   echo "SF Fonts are already present. Skipping install."
 else
   git clone https://github.com/aishalih/sfwin.git ${SETUP_PATH}/sfwin
-  sudo mkdir -p /usr/share/fonts/opentype/sfwin/
-  find ${SETUP_PATH}/sfwin -name \*.otf -exec sudo cp -v {} /usr/share/fonts/opentype/sfwin/ \;
-  sudo fc-cache -f -v
+  mkdir -p $HOME/.local/share/fonts/opentype/sfwin/
+  find ${SETUP_PATH}/sfwin -name \*.otf -exec sudo cp -v {} $HOME/.local/share/fonts/opentype/sfwin/ \;
+  fc-cache -f -v
 fi
 
 gsettings set org.gnome.desktop.interface font-name "SF Pro Display 11"

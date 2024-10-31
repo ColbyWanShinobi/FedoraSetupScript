@@ -50,3 +50,4 @@ gsettings set org.gnome.mutter experimental-features '["variable-refresh-rate"]'
 #gnome-shell --replace &
 
 dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed true
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
