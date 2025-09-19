@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 ################
-APP_NAME=vscode
-APP_COMMAND=code
-DL_URL='https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64'
+APP_NAME=dropbox
+APP_COMMAND=dropbox
+DL_URL='https://www.dropbox.com/download?dl=packages/fedora/nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm'
 PACKAGE_TYPE=rpm
 ################
 # Space delimited list of required command-line utilities to run this script
@@ -37,4 +37,4 @@ curl --location --silent --fail --show-error --output ${PACKAGE_PATH} ${DL_URL}
 
 # Install the package
 echo "Installing ${PACKAGE_PATH}"
-sudo rpm-ostree install -y ${PACKAGE_PATH}
+sudo dnf install -y ${PACKAGE_PATH} libappindicator-gtk3 python3-gpg

@@ -51,6 +51,7 @@ extlist=(
 "https://extensions.gnome.org/extension/2/move-clock/"
 "https://extensions.gnome.org/extension/744/hide-activities-button/"
 "https://extensions.gnome.org/extension/988/harddisk-led/"
+"https://extensions.gnome.org/extension/7603/advanced-weather-companion/"
 )
 
 CURRENT_GNOME_VERSION=$(gnome-shell --version | grep -oP '\d+\.\d+' | head -1 | cut -f1 -d.)
