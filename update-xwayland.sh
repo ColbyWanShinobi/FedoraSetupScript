@@ -4,7 +4,7 @@ set -e
 
 PACKAGE_NAME="xorg-x11-server-Xwayland"
 
-NOBARA_URL="https://download.copr.fedorainfracloud.org/results/gloriouseggroll/nobara-42/fedora-42-x86_64/"
+NOBARA_URL="https://download.copr.fedorainfracloud.org/results/gloriouseggroll/nobara-43/fedora-43-x86_64/"
 
 # Get the Fedora version
 FEDORA_VERSION=$(rpm -E %fedora)

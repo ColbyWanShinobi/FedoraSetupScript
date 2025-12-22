@@ -2,9 +2,9 @@
 
 set -euo pipefail
 ################
-APP_NAME=vscode
-APP_COMMAND=code
-DL_URL='https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64'
+APP_NAME=vscodium
+APP_COMMAND=codium
+DL_URL='https://github.com/VSCodium/vscodium/releases/download/1.105.17075/codium-1.105.17075-el8.x86_64.rpm'
 PACKAGE_TYPE=rpm
 ################
 # Space delimited list of required command-line utilities to run this script

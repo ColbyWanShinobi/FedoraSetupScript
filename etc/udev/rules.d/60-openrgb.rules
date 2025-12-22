@@ -1,5 +1,5 @@
 #---------------------------------------------------------------#
-#  OpenRGB udev rules - Git Commit: 7bf0e40f                    #
+#  OpenRGB udev rules - Git Commit: b5f46e3f                    #
 #---------------------------------------------------------------#
 
 #---------------------------------------------------------------#
@@ -38,6 +38,18 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="fa60", TAG
 # AMD Wraith Prism - DetectAMDWraithPrismControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="2516", ATTRS{idProduct}=="0051", TAG+="uaccess", TAG+="AMD_Wraith_Prism"
+#---------------------------------------------------------------#
+# AOC Keyboard - DetectAOCKeyboardControllers
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3938", ATTRS{idProduct}=="1178", TAG+="uaccess", TAG+="AOC_GK500"
+#---------------------------------------------------------------#
+# AOC Mouse - DetectAOCMouseControllers
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3938", ATTRS{idProduct}=="1179", TAG+="uaccess", TAG+="AOC_GM500"
+#---------------------------------------------------------------#
+# AOC Mousemat - DetectAOCMousematControllers
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3938", ATTRS{idProduct}=="1162", TAG+="uaccess", TAG+="AOC_AGON_AMM700"
 #---------------------------------------------------------------#
 # ASrock Polychrome USB - DetectPolychromeUSBControllers
 #---------------------------------------------------------------#
@@ -83,12 +95,14 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18af", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18f8", TAG+="uaccess", TAG+="ASUS_ROG_Strix_Scope"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1951", TAG+="uaccess", TAG+="ASUS_ROG_Strix_Scope_RX"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="190c", TAG+="uaccess", TAG+="ASUS_ROG_Strix_Scope_TKL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1a05", TAG+="uaccess", TAG+="ASUS_ROG_Strix_Scope_RX_TKL_Wireless_Deluxe"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1954", TAG+="uaccess", TAG+="ASUS_ROG_Strix_Scope_TKL_PNK_LTD"
 #---------------------------------------------------------------#
 # Asus Aura Monitor - DetectAsusAuraUSBMonitor
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="198c", TAG+="uaccess", TAG+="ASUS_ROG_Strix_XG27AQ"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="19bb", TAG+="uaccess", TAG+="ASUS_ROG_Strix_XG27AQM"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1919", TAG+="uaccess", TAG+="ASUS_ROG_Strix_XG279Q"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1933", TAG+="uaccess", TAG+="ASUS_ROG_Strix_XG27W"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="19b9", TAG+="uaccess", TAG+="ASUS_ROG_PG32UQ"
 #---------------------------------------------------------------#
@@ -110,6 +124,8 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18e3", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1958", TAG+="uaccess", TAG+="Asus_ROG_Chakram_Core"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1a18", TAG+="uaccess", TAG+="Asus_ROG_Chakram_X_USB"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1a1a", TAG+="uaccess", TAG+="Asus_ROG_Chakram_X_24GHz"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1977", TAG+="uaccess", TAG+="Asus_ROG_Spatha_X_USB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1979", TAG+="uaccess", TAG+="Asus_ROG_Spatha_X_24GHz"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1846", TAG+="uaccess", TAG+="ASUS_ROG_Pugio"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1906", TAG+="uaccess", TAG+="ASUS_ROG_Pugio_II_Wired"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1908", TAG+="uaccess", TAG+="ASUS_ROG_Pugio_II_Wireless"
@@ -146,8 +162,10 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="185b", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="184d", TAG+="uaccess", TAG+="ASUS_ROG_Claymore"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="193c", TAG+="uaccess", TAG+="ASUS_ROG_Falchion_Wired"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="193e", TAG+="uaccess", TAG+="ASUS_ROG_Falchion_Wireless"
-SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18aa", TAG+="uaccess", TAG+="ASUS_TUF_Gaming_K7"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1945", TAG+="uaccess", TAG+="ASUS_TUF_Gaming_K1"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="194b", TAG+="uaccess", TAG+="ASUS_TUF_Gaming_K3"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1899", TAG+="uaccess", TAG+="ASUS_TUF_Gaming_K5"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18aa", TAG+="uaccess", TAG+="ASUS_TUF_Gaming_K7"
 #---------------------------------------------------------------#
 # Asus Aura USB - DetectAsusAuraUSBTerminal
 #---------------------------------------------------------------#
@@ -166,6 +184,10 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18f3", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1939", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="19af", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
 #---------------------------------------------------------------#
+# Asus ROG Ally - DetectAsusROGAlly
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1abe", TAG+="uaccess", TAG+="ASUS_ROG_Ally"
+#---------------------------------------------------------------#
 # Asus ROG Strix Liquid Cooler - DetectAsusAuraUSBROGStrixLC
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="879e", TAG+="uaccess", TAG+="ASUS_ROG_Strix_LC"
@@ -180,7 +202,32 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="195d", ATTRS{idProduct}=="1016", TAG
 #---------------------------------------------------------------#
 # Blinky Tape - DetectBlinkyTapeControllers
 #---------------------------------------------------------------#
-SUBSYSTEMS=="serial|hidraw", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="605e", TAG+="uaccess", TAG+="BlinkyTape"
+SUBSYSTEMS=="serial|hidraw", ATTRS{idVendor}=="306f", ATTRS{idProduct}=="1234", TAG+="uaccess", TAG+="JSAUX_RGB_Docking_Station"
+#---------------------------------------------------------------#
+# Cherry Keyboard - DetectCherryKeyboards
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="0077", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_BOARD_30S_FL_NBL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="0079", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_BOARD_30S_FL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="0083", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_BOARD_30S_FL_RGB_KOREAN"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00ab", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_10_FL_BL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00ac", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_BOARD_10_TKL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00b7", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_BOARD_80_TKL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00bb", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_BOARD_100_FL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00c3", TAG+="uaccess", TAG+="Cherry_Keyboard_G803000_TKL_NBL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00c4", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_BOARD_20S_FL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00c5", TAG+="uaccess", TAG+="Cherry_Keyboard_G803000_TKL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00c7", TAG+="uaccess", TAG+="Cherry_Keyboard_MV_BOARD_30_FL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00c9", TAG+="uaccess", TAG+="Cherry_Keyboard_CCF_MX_80_TKL_BL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00ca", TAG+="uaccess", TAG+="Cherry_Keyboard_CCF_MX_10_TKL_BL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00cb", TAG+="uaccess", TAG+="Cherry_Keyboard_CCF_MX_10_TKL_NBL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00cd", TAG+="uaccess", TAG+="Cherry_Keyboard_G803000_TKL_NBL_KOREAN"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00ce", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_BOARD_20S_FL_NBL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00d2", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_10_FL_NBL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00d3", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_10_FL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00dd", TAG+="uaccess", TAG+="Cherry_Keyboard_G803000N_TKL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00de", TAG+="uaccess", TAG+="Cherry_Keyboard_G803000N_FL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="00df", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_BOARD_100N_FL_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="01a6", TAG+="uaccess", TAG+="Cherry_Keyboard_MX_BOARD_20S_FL_RGB_DE"
 #---------------------------------------------------------------#
 # Coolermaster ARGB - DetectCoolerMasterARGB
 #---------------------------------------------------------------#
@@ -244,6 +291,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="2516", ATTRS{idProduct}=="1000", TAG
 # Corsair Commander Core - DetectCorsairCapellixHIDControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="0c1c", TAG+="uaccess", TAG+="Corsair_Commander_Core"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="0c32", TAG+="uaccess", TAG+="Corsair_Commander_Core"
 #---------------------------------------------------------------#
 # Corsair Hydro Series H100i v2 AIO - DetectCorsairHydro2Controllers
 #---------------------------------------------------------------#
@@ -328,11 +376,17 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="1b2f", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="1b3b", TAG+="uaccess", TAG+="Corsair_MM800_RGB_Polaris"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="0a34", TAG+="uaccess", TAG+="Corsair_ST100_RGB"
 #---------------------------------------------------------------#
-# Corsair K55 RGB Pro - DetectCorsairV2SoftwareControllers
+# Corsair Peripherals V2 Hardware - DetectCorsairV2HardwareControllers
+#---------------------------------------------------------------#
+#---------------------------------------------------------------#
+# Corsair Peripherals V2 Software - DetectCorsairV2SoftwareControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="1ba4", TAG+="uaccess", TAG+="Corsair_K55_RGB_PRO"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="1ba0", TAG+="uaccess", TAG+="Corsair_K60_RGB_PRO"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="1bad", TAG+="uaccess", TAG+="Corsair_K60_RGB_PRO_Low_Profile"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="1ba6", TAG+="uaccess", TAG+="Corsair_Ironclaw_Wireless"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="1b4c", TAG+="uaccess", TAG+="Corsair_Ironclaw_Wireless_Wired"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="1b70", TAG+="uaccess", TAG+="Corsair_M55_RGB_PRO"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="1b9b", TAG+="uaccess", TAG+="Corsair_MM700"
 #---------------------------------------------------------------#
 # Corsair Wireless Peripheral - DetectCorsairWirelessControllers
@@ -351,6 +405,13 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="12cf", ATTRS{idProduct}=="0412", TAG
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="041e", ATTRS{idProduct}=="3256", TAG+="uaccess", TAG+="Creative_SoundBlasterX_G6"
 #---------------------------------------------------------------#
+# Cryorig H7 Quad Lumi - DetectCryorigH7QuadLumi
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="1712", TAG+="uaccess", TAG+="CRYORIG_H7_Quad_Lumi"
+#---------------------------------------------------------------#
+# DMX Devices - DetectDMXControllers
+#---------------------------------------------------------------#
+#---------------------------------------------------------------#
 # Dark Project Keyboard - DetectDarkProjectKeyboardControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="195d", ATTRS{idProduct}=="2061", TAG+="uaccess", TAG+="Dark_Project_KD3B_V2"
@@ -358,6 +419,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="195d", ATTRS{idProduct}=="2061", TAG
 # Das Keyboard - DetectDasKeyboardControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="24f0", ATTRS{idProduct}=="2020", TAG+="uaccess", TAG+="Das_Keyboard_Q5_RGB"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="24f0", ATTRS{idProduct}=="209a", TAG+="uaccess", TAG+="Das_Keyboard_Q5S_RGB"
 #---------------------------------------------------------------#
 # Das Keyboard - DetectDas4QKeyboard
 #---------------------------------------------------------------#
@@ -381,6 +443,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5750", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3842", ATTRS{idProduct}=="260e", TAG+="uaccess", TAG+="EVGA_Z15_Keyboard"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3842", ATTRS{idProduct}=="2608", TAG+="uaccess", TAG+="EVGA_Z15_Keyboard"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3842", ATTRS{idProduct}=="260a", TAG+="uaccess", TAG+="EVGA_Z20_Keyboard"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3842", ATTRS{idProduct}=="2610", TAG+="uaccess", TAG+="EVGA_Z20_Keyboard"
 #---------------------------------------------------------------#
 # EVGA USB X20 Mouse - DetectWiredEVGAMouse
 #---------------------------------------------------------------#
@@ -394,18 +457,28 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3842", ATTRS{idProduct}=="2402", TAG
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="5204", TAG+="uaccess", TAG+="EVision_Keyboard_0C455204"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="5104", TAG+="uaccess", TAG+="EVision_Keyboard_0C455104"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="320f", ATTRS{idProduct}=="5000", TAG+="uaccess", TAG+="EVision_Keyboard_320F5000"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="5004", TAG+="uaccess", TAG+="EVision_Keyboard_0C455004"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="652f", TAG+="uaccess", TAG+="EVision_Keyboard_0C45652F"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="8520", TAG+="uaccess", TAG+="EVision_Keyboard_0C458520"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="320f", ATTRS{idProduct}=="502a", TAG+="uaccess", TAG+="EVision_Keyboard_320F502A"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="7698", TAG+="uaccess", TAG+="EVision_Keyboard_0C457698"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="320f", ATTRS{idProduct}=="5064", TAG+="uaccess", TAG+="EVision_Keyboard_320F5064"
+#---------------------------------------------------------------#
+# Epomaker TH80 Pro - EpomakerControllerDetect
+#---------------------------------------------------------------#
 #---------------------------------------------------------------#
 # FanBus - DetectFanBusControllers
 #---------------------------------------------------------------#
 #---------------------------------------------------------------#
-# GaiZhongGai Keyboard - DetectGaiZhongGaiKeyboardControllers
+# GaiZhongGai Keyboard/Controller - DetectGaiZhongGaiKeyboardControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3061", ATTRS{idProduct}=="4700", TAG+="uaccess", TAG+="GaiZhongGai_684_PRO"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3061", ATTRS{idProduct}=="4701", TAG+="uaccess", TAG+="GaiZhongGai_42_PRO"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3061", ATTRS{idProduct}=="4720", TAG+="uaccess", TAG+="GaiZhongGai_Dial"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3061", ATTRS{idProduct}=="4710", TAG+="uaccess", TAG+="GaiZhongGai_LightBoard"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3061", ATTRS{idProduct}=="4711", TAG+="uaccess", TAG+="GaiZhongGai_RGB_HUB_Green"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3061", ATTRS{idProduct}=="4712", TAG+="uaccess", TAG+="GaiZhongGai_RGB_HUB_Blue"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3061", ATTRS{idProduct}=="4770", TAG+="uaccess", TAG+="GaiZhongGai_174Touch_PRO"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3061", ATTRS{idProduct}=="4771", TAG+="uaccess", TAG+="GaiZhongGai_17_PRO"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3061", ATTRS{idProduct}=="4772", TAG+="uaccess", TAG+="GaiZhongGai_20_PRO"
@@ -453,26 +526,39 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="16dc", TAG
 # HyperX Alloy Origins - DetectHyperXAlloyOrigins
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="16e6", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_Core"
-SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="1734", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_60"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="098f", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_Core_HP"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="16e5", TAG+="uaccess", TAG+="HyperX_Alloy_Origins"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="1734", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_60"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="0591", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_HP"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="0c8e", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_60_HP"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="038f", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_65_HP"
 #---------------------------------------------------------------#
-# HyperX Alloy Origins 60 - DetectHyperXAlloyOrigins60
+# HyperX Alloy Origins 60 and 65 - DetectHyperXAlloyOrigins60and65
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="1734", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_60"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="0c8e", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_60_HP"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="038f", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_65_HP"
 #---------------------------------------------------------------#
 # HyperX Alloy Origins Core - DetectHyperXAlloyOriginsCore
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="16e6", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_Core"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="098f", TAG+="uaccess", TAG+="HyperX_Alloy_Origins_Core_HP"
 #---------------------------------------------------------------#
+# HyperX Quadcast S - DetectHyperXMicrophoneControllers
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="171f", TAG+="uaccess", TAG+="HyperX_Quadcast_S"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="0f8b", TAG+="uaccess", TAG+="HyperX_Quadcast_S"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="068c", TAG+="uaccess", TAG+="HyperX_Quadcast_S"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="0294", TAG+="uaccess", TAG+="HyperX_Quadcast_S"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="028c", TAG+="uaccess", TAG+="HyperX_Quadcast_S"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="098c", TAG+="uaccess", TAG+="HyperX_DuoCast"
+#---------------------------------------------------------------#
 # HyperX Pulsefire Dart - DetectHyperXPulsefireDartControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="16e1", TAG+="uaccess", TAG+="HyperX_Pulsefire_Dart_Wireless"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="068e", TAG+="uaccess", TAG+="HyperX_Pulsefire_Dart_Wireless"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="16e2", TAG+="uaccess", TAG+="HyperX_Pulsefire_Dart_Wired"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="088e", TAG+="uaccess", TAG+="HyperX_Pulsefire_Dart_Wired"
 #---------------------------------------------------------------#
 # HyperX Pulsefire FPS - DetectHyperXPulsefireFPSProControllers
 #---------------------------------------------------------------#
@@ -481,6 +567,8 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="16de", TAG
 #---------------------------------------------------------------#
 # HyperX Pulsefire Haste - DetectHyperXPulsefireHasteControllers
 #---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="0f8f", TAG+="uaccess", TAG+="HyperX_Pulsefire_Haste"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="0f8f", TAG+="uaccess", TAG+="HyperX_Pulsefire_Haste"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="1727", TAG+="uaccess", TAG+="HyperX_Pulsefire_Haste"
 #---------------------------------------------------------------#
 # HyperX Pulsefire Raid - DetectHyperXPulsefireRaidControllers
@@ -495,6 +583,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="16d3", TAG
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="1705", TAG+="uaccess", TAG+="HyperX_Fury_Ultra"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="0f8d", TAG+="uaccess", TAG+="HyperX_Pulsefire_Mat"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="1741", TAG+="uaccess", TAG+="HyperX_Pulsefire_Mat_RGB_Mouse_Pad_XL"
 #---------------------------------------------------------------#
 # Intel Arc A770 Limited Edition - DetectIntelArcA770LEControllers
 #---------------------------------------------------------------#
@@ -505,6 +594,9 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="2516", ATTRS{idProduct}=="01b5", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="048d", ATTRS{idProduct}=="6005", TAG+="uaccess", TAG+="Ionico_Light_Bar"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="048d", ATTRS{idProduct}=="ce00", TAG+="uaccess", TAG+="Ionico_Keyboard"
 #---------------------------------------------------------------#
+# Kasa Smart Bulbs - DetectKasaSmartControllers
+#---------------------------------------------------------------#
+#---------------------------------------------------------------#
 # Keychron Keyboard - DetectKeychronKeyboardControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="05ac", ATTRS{idProduct}=="024f", TAG+="uaccess", TAG+="Keychron_Gaming_Keyboard_1"
@@ -514,6 +606,10 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="05ac", ATTRS{idProduct}=="024f", TAG
 #---------------------------------------------------------------#
 # LIFX Globes - DetectLIFXControllers
 #---------------------------------------------------------------#
+#---------------------------------------------------------------#
+# Lego Dimensions Toypad Base - DetectLegoDimensionsToypadBaseControllers
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0e6f", ATTRS{idProduct}=="0241", TAG+="uaccess", TAG+="Lego_Dimensions_Toypad_Base"
 #---------------------------------------------------------------#
 # Lenovo USB - DetectLenovoLegionUSBControllers
 #---------------------------------------------------------------#
@@ -534,15 +630,24 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="fd0a", TAG
 # Lian Li Uni Hub - DetectLianLiUniHub
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="a101", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub__AL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="a103", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub__SL_V2"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="a105", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub__SL_V2_v05"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="7750", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub"
 #---------------------------------------------------------------#
 # Lian Li Uni Hub AL - DetectLianLiUniHubAL
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="a101", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub__AL"
 #---------------------------------------------------------------#
+# Lian Li Uni Hub SLV2 - DetectLianLiUniHubSLV2
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="a103", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub__SL_V2"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="a105", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub__SL_V2_v05"
+#---------------------------------------------------------------#
 # Lian Li Uni Hub - DetectLianLiUniHub
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="a101", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub__AL"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="a103", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub__SL_V2"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="a105", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub__SL_V2_v05"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="7750", TAG+="uaccess", TAG+="Lian_Li_Uni_Hub"
 #---------------------------------------------------------------#
 # Lian Li Strimer L Connect - DetectStrimerControllers
@@ -633,6 +738,8 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="4067", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="4087", TAG+="uaccess", TAG+="Logitech_G903_Hero_Wireless_Gaming_Mouse"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="4079", TAG+="uaccess", TAG+="Logitech_G_Pro_Wireless_Gaming_Mouse"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="405f", TAG+="uaccess", TAG+="Logitech_Powerplay_Mat"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c539", TAG+="uaccess", TAG+="Logitech_G_Lightspeed_Receiver"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c53a", TAG+="uaccess", TAG+="Logitech_Powerplay_Mat_Receiver"
 #---------------------------------------------------------------#
 # Logitech Lightspeed - DetectLogitechWired
 #---------------------------------------------------------------#
@@ -653,6 +760,8 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="0a87", TAG
 #---------------------------------------------------------------#
 # Logitech X56 - DetectLogitechX56
 #---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0738", ATTRS{idProduct}=="2221", TAG+="uaccess", TAG+="Logitech_X56_Rhino_Hotas_Joystick"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0738", ATTRS{idProduct}=="a221", TAG+="uaccess", TAG+="Logitech_X56_Rhino_Hotas_Throttle"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0738", ATTRS{idProduct}=="2221", TAG+="uaccess", TAG+="Logitech_X56_Rhino_Hotas_Joystick"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0738", ATTRS{idProduct}=="a221", TAG+="uaccess", TAG+="Logitech_X56_Rhino_Hotas_Throttle"
 #---------------------------------------------------------------#
@@ -686,6 +795,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c77", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c79", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C79"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c80", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C80"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c81", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C81"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c82", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C82"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c83", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C83"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c84", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C84"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c86", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C86"
@@ -696,6 +806,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c92", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c94", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C94"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c95", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C95"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c98", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C98"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d03", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D03"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d06", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D06"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d07", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D07"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d08", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D08"
@@ -718,6 +829,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d38", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d41", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D41"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d42", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D42"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d43", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D43"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d46", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D46"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d50", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D50"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d51", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D51"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d52", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D52"
@@ -726,11 +838,19 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d54", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d59", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D59"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d67", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D67"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d69", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D69"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d70", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D70"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d73", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D73"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d75", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D75"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d76", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D76"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d77", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D77"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d78", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D78"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d86", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D86"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d89", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D89"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d91", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D91"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7e01", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7E01"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7e06", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7E06"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7e07", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7E07"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="b926", TAG+="uaccess", TAG+="MSI_Mystic_Light_MSB926"
 #---------------------------------------------------------------#
 # MSI Mystic Light (162 Byte) - DetectMSIMysticLightControllers
 #---------------------------------------------------------------#
@@ -758,6 +878,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c77", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c79", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C79"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c80", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C80"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c81", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C81"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c82", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C82"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c83", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C83"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c84", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C84"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c86", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C86"
@@ -768,6 +889,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c92", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c94", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C94"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c95", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C95"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c98", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C98"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d03", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D03"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d06", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D06"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d07", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D07"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d08", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D08"
@@ -790,6 +912,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d38", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d41", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D41"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d42", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D42"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d43", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D43"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d46", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D46"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d50", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D50"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d51", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D51"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d52", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D52"
@@ -798,11 +921,19 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d54", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d59", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D59"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d67", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D67"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d69", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D69"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d70", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D70"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d73", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D73"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d75", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D75"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d76", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D76"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d77", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D77"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d78", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D78"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d86", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D86"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d89", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D89"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d91", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D91"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7e01", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7E01"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7e06", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7E06"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7e07", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7E07"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="b926", TAG+="uaccess", TAG+="MSI_Mystic_Light_MSB926"
 #---------------------------------------------------------------#
 # MSI Mystic Light (185 Byte) - DetectMSIMysticLightControllers
 #---------------------------------------------------------------#
@@ -830,6 +961,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c77", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c79", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C79"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c80", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C80"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c81", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C81"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c82", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C82"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c83", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C83"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c84", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C84"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c86", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C86"
@@ -840,6 +972,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c92", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c94", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C94"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c95", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C95"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7c98", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7C98"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d03", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D03"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d06", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D06"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d07", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D07"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d08", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D08"
@@ -862,6 +995,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d38", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d41", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D41"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d42", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D42"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d43", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D43"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d46", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D46"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d50", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D50"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d51", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D51"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d52", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D52"
@@ -870,11 +1004,19 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d54", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d59", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D59"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d67", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D67"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d69", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D69"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d70", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D70"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d73", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D73"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d75", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D75"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d76", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D76"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d77", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D77"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d78", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D78"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d86", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D86"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d89", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D89"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7d91", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7D91"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7e01", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7E01"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7e06", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7E06"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="7e07", TAG+="uaccess", TAG+="MSI_Mystic_Light_MS7E07"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="b926", TAG+="uaccess", TAG+="MSI_Mystic_Light_MSB926"
 #---------------------------------------------------------------#
 # MSI GL66 Mystic Light Keyboard (64 Byte) - DetectMSIMysticLight64Controllers
 #---------------------------------------------------------------#
@@ -890,9 +1032,17 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="3fa4", TAG
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0db0", ATTRS{idProduct}=="0b30", TAG+="uaccess", TAG+="MSI_Vigor_GK30_controller"
 #---------------------------------------------------------------#
+# Mountain Keyboard - DetectMountainKeyboardControllers
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3282", ATTRS{idProduct}=="0001", TAG+="uaccess", TAG+="Mountain_Everest"
+#---------------------------------------------------------------#
 # N5312A mouse - DetectN5312AControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="4e53", ATTRS{idProduct}=="5406", TAG+="uaccess", TAG+="N5312A_USB_Optical_Mouse"
+#---------------------------------------------------------------#
+# NZXT Hue 1 - DetectNZXTHue1Controllers
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="1714", TAG+="uaccess", TAG+="NZXT_Smart_Device_V1"
 #---------------------------------------------------------------#
 # NZXT Hue2 - DetectNZXTHue2
 #---------------------------------------------------------------#
@@ -918,13 +1068,15 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="200f", TAG
 #---------------------------------------------------------------#
 # NZXT Hue2 - DetectNZXTKrakenX3
 #---------------------------------------------------------------#
-SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="2007", TAG+="uaccess", TAG+="NZXT_Kraken_X3"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="2007", TAG+="uaccess", TAG+="NZXT_Kraken_X3_Series"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="2014", TAG+="uaccess", TAG+="NZXT_Kraken_X3_Series_RGB"
 #---------------------------------------------------------------#
 # NZXT Hue2 - DetectNZXTFanController
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="2009", TAG+="uaccess", TAG+="NZXT_RGB__Fan_Controller"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="2010", TAG+="uaccess", TAG+="NZXT_RGB__Fan_Controller"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="200e", TAG+="uaccess", TAG+="NZXT_RGB__Fan_Controller"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="2011", TAG+="uaccess", TAG+="NZXT_RGB__Fan_Controller"
 #---------------------------------------------------------------#
 # NZXT Hue+ - DetectNZXTHuePlusControllers
 #---------------------------------------------------------------#
@@ -934,6 +1086,10 @@ SUBSYSTEMS=="serial|hidraw", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="00df", 
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="170e", TAG+="uaccess", TAG+="NZXT_Kraken_X2"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="1715", TAG+="uaccess", TAG+="NZXT_Kraken_M2"
+#---------------------------------------------------------------#
+# Nollie Controller - DetectNollieControllers
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="3061", ATTRS{idProduct}=="4714", TAG+="uaccess", TAG+="Nollie_32CH"
 #---------------------------------------------------------------#
 # NVidia ESA - DetectNvidiaESAControllers
 #---------------------------------------------------------------#
@@ -968,6 +1124,9 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="022a", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="025e", TAG+="uaccess", TAG+="Razer_Cynosa_Chroma_V2"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="023f", TAG+="uaccess", TAG+="Razer_Cynosa_Lite"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0204", TAG+="uaccess", TAG+="Razer_Deathstalker_Chroma"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0295", TAG+="uaccess", TAG+="Razer_Deathstalker_V2"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0292", TAG+="uaccess", TAG+="Razer_Deathstalker_V2_Pro_Wired"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0290", TAG+="uaccess", TAG+="Razer_Deathstalker_V2_Pro_Wireless"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0227", TAG+="uaccess", TAG+="Razer_Huntsman"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0226", TAG+="uaccess", TAG+="Razer_Huntsman_Elite"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0257", TAG+="uaccess", TAG+="Razer_Huntsman_Mini"
@@ -978,9 +1137,13 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="026c", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="021e", TAG+="uaccess", TAG+="Razer_Ornata_Chroma"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="025d", TAG+="uaccess", TAG+="Razer_Ornata_Chroma_V2"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="028f", TAG+="uaccess", TAG+="Razer_Ornata_V3"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="02a1", TAG+="uaccess", TAG+="Razer_Ornata_V3_Rev2"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0294", TAG+="uaccess", TAG+="Razer_Ornata_V3_X"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="020f", TAG+="uaccess", TAG+="Razer_Blade_2016"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0224", TAG+="uaccess", TAG+="Razer_Blade_Late_2016"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0270", TAG+="uaccess", TAG+="Razer_Blade_14_2021"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="028c", TAG+="uaccess", TAG+="Razer_Blade_14_2022"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="028a", TAG+="uaccess", TAG+="Razer_Blade_15_2022"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0233", TAG+="uaccess", TAG+="Razer_Blade_15_2018_Advanced"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="023b", TAG+="uaccess", TAG+="Razer_Blade_15_2018_Base"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0240", TAG+="uaccess", TAG+="Razer_Blade_15_2018_Mercury"
@@ -992,6 +1155,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0253", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0255", TAG+="uaccess", TAG+="Razer_Blade_15_2020_Base"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0268", TAG+="uaccess", TAG+="Razer_Blade_15_Late_2020"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="026d", TAG+="uaccess", TAG+="Razer_Blade_15_2021_Advanced"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0276", TAG+="uaccess", TAG+="Razer_Blade_15_Late_2021_Advanced"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="026f", TAG+="uaccess", TAG+="Razer_Blade_15_2021_Base"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="027a", TAG+="uaccess", TAG+="Razer_Blade_15_2021_Base"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0210", TAG+="uaccess", TAG+="Razer_Blade_Pro_2016"
@@ -1079,8 +1243,10 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0215", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0f1a", TAG+="uaccess", TAG+="Razer_Core_X"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0f0d", TAG+="uaccess", TAG+="Razer_Laptop_Stand_Chroma"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0f2b", TAG+="uaccess", TAG+="Razer_Laptop_Stand_Chroma_V2"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="054a", TAG+="uaccess", TAG+="Razer_Leviathan_V2_X"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0f1d", TAG+="uaccess", TAG+="Razer_Mouse_Bungee_V3_Chroma"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="007e", TAG+="uaccess", TAG+="Razer_Mouse_Dock_Chroma"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="00a4", TAG+="uaccess", TAG+="Razer_Mouse_Dock_Pro"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0f13", TAG+="uaccess", TAG+="Lian_Li_O11_Dynamic__Razer_Edition"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0f1b", TAG+="uaccess", TAG+="Razer_Seiren_Emote"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0f21", TAG+="uaccess", TAG+="Razer_Thunderbolt_4_Dock_Chroma"
@@ -1098,6 +1264,10 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0506", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0504", TAG+="uaccess", TAG+="Razer_Kraken_71_Chroma"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0510", TAG+="uaccess", TAG+="Razer_Kraken_71_V2"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0527", TAG+="uaccess", TAG+="Razer_Kraken_Ultimate"
+#---------------------------------------------------------------#
+# Keyrox - DetectRedSquareKeyroxTKLClassic
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0416", ATTRS{idProduct}=="c345", TAG+="uaccess", TAG+="Red_Square_Keyrox_TKL_Classic"
 #---------------------------------------------------------------#
 # Redragon Mice - DetectRedragonMice
 #---------------------------------------------------------------#
@@ -1136,9 +1306,15 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e7d", ATTRS{idProduct}=="2e2c", TAG
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e7d", ATTRS{idProduct}=="3098", TAG+="uaccess", TAG+="Roccat_Vulcan_120Series_Aimo"
 #---------------------------------------------------------------#
+# SRGBmods LED Controller V1 - DetectSRGBmodsControllers
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="1123", TAG+="uaccess", TAG+="SRGBmods_Pico_LED_Controller"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="1205", TAG+="uaccess", TAG+="SRGBMods_LED_Controller_v1"
+#---------------------------------------------------------------#
 # SRGBmods Raspberry Pi Pico LED Controller - DetectSRGBmodsControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="1123", TAG+="uaccess", TAG+="SRGBmods_Pico_LED_Controller"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="1205", TAG+="uaccess", TAG+="SRGBMods_LED_Controller_v1"
 #---------------------------------------------------------------#
 # Sinowealth Mice - DetectSinowealthMouse
 #---------------------------------------------------------------#
@@ -1351,6 +1527,10 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="145f", ATTRS{idProduct}=="026d", TAG
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="145f", ATTRS{idProduct}=="0248", TAG+="uaccess", TAG+="Trust_GXT_180"
 #---------------------------------------------------------------#
+# Viewsonic Monitor - DetectViewSonic
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0416", ATTRS{idProduct}=="5020", TAG+="uaccess", TAG+="ViewSonic_Monitor_XG270QG"
+#---------------------------------------------------------------#
 # Wooting Keyboards - DetectWootingOneKeyboardControllers
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff01", TAG+="uaccess", TAG+="Wooting_One_Legacy"
@@ -1370,9 +1550,15 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1212", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1220", TAG+="uaccess", TAG+="Wooting_Two_HE_Xbox"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1221", TAG+="uaccess", TAG+="Wooting_Two_HE_Classic"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1222", TAG+="uaccess", TAG+="Wooting_Two_HE_None"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1230", TAG+="uaccess", TAG+="Wooting_Two_HE_ARM_Xbox"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1231", TAG+="uaccess", TAG+="Wooting_Two_HE_ARM_Classic"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1232", TAG+="uaccess", TAG+="Wooting_Two_HE_ARM_None"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1300", TAG+="uaccess", TAG+="Wooting_Two_60HE_Xbox"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1301", TAG+="uaccess", TAG+="Wooting_Two_60HE_Classic"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1302", TAG+="uaccess", TAG+="Wooting_Two_60HE_None"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1310", TAG+="uaccess", TAG+="Wooting_Two_60HE_ARM_Xbox"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1311", TAG+="uaccess", TAG+="Wooting_Two_60HE_ARM_Classic"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1312", TAG+="uaccess", TAG+="Wooting_Two_60HE_ARM_None"
 #---------------------------------------------------------------#
 # ZET Edge Air Pro - DetectZETGAMINGEdgeAirProControllers
 #---------------------------------------------------------------#
