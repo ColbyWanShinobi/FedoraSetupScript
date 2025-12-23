@@ -27,3 +27,15 @@ curl --location --silent --fail --show-error --output ${HOME}/Downloads/$PACKAGE
 
 # Force install the downloaded package by name to avoid dependency issues
 sudo dnf reinstall --assumeyes ${HOME}/Downloads/$PACKAGE_NAME-$CURRENT_PACKAGE_VERSION.x86_64.rpm
+
+# Install versionlock plugin if not already installed
+echo "Ensuring versionlock plugin is installed..."
+sudo dnf install --assumeyes python3-dnf-plugin-versionlock
+
+# Lock the package to prevent updates
+echo "Locking $PACKAGE_NAME to prevent future updates..."
+sudo dnf versionlock delete $PACKAGE_NAME 2>/dev/null || true
+sudo dnf versionlock add $PACKAGE_NAME
+
+echo "Version lock applied successfully. Package will not be updated by dnf update/upgrade."
+echo "To unlock later, run: sudo dnf versionlock delete $PACKAGE_NAME"

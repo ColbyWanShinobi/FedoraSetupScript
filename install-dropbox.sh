@@ -38,3 +38,23 @@ curl --location --silent --fail --show-error --output ${PACKAGE_PATH} ${DL_URL}
 # Install the package
 echo "Installing ${PACKAGE_PATH}"
 sudo dnf install -y ${PACKAGE_PATH} libappindicator-gtk3 python3-gpg
+
+# Install versionlock plugin if not already installed
+echo "Ensuring versionlock plugin is installed..."
+sudo dnf install --assumeyes python3-dnf-plugin-versionlock
+
+# Lock the package to prevent updates
+PACKAGE_NAME="nautilus-dropbox"
+echo "Locking $PACKAGE_NAME to prevent future updates..."
+sudo dnf versionlock delete $PACKAGE_NAME 2>/dev/null || true
+sudo dnf versionlock add $PACKAGE_NAME
+
+# Exclude dropbox packages from DNF updates
+echo "Excluding dropbox packages from DNF updates..."
+sudo mkdir -p /etc/dnf/dnf.conf.d
+echo "exclude=dropbox nautilus-dropbox" | sudo tee /etc/dnf/dnf.conf.d/exclude-dropbox.conf > /dev/null
+
+echo "Version lock applied successfully. Package will not be updated by dnf update/upgrade."
+echo "Dropbox packages excluded from DNF updates."
+echo "To unlock later, run: sudo dnf versionlock delete $PACKAGE_NAME"
+echo "To remove exclude, run: sudo rm /etc/dnf/dnf.conf.d/exclude-dropbox.conf"
