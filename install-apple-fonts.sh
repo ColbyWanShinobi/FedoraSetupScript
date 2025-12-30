@@ -52,10 +52,10 @@ else
   fc-cache -f -v
 fi
 
-#gsettings set org.gnome.desktop.interface font-name "SF Pro Display 11"
-#gsettings set org.gnome.desktop.interface monospace-font-name "SF Mono 13"
-#gsettings set org.gnome.desktop.interface  document-font-name "SF Pro Display 11"
-#gsettings set org.gnome.desktop.wm.preferences titlebar-font "SF Pro Display, Bold 11"
+gsettings set org.gnome.desktop.interface font-name "SF Pro Display 11"
+gsettings set org.gnome.desktop.interface monospace-font-name "SF Mono 13"
+gsettings set org.gnome.desktop.interface  document-font-name "SF Pro Display 11"
+gsettings set org.gnome.desktop.wm.preferences titlebar-font "SF Pro Display, Bold 11"
 
 #To reset back to default
 #gsettings reset org.gnome.desktop.interface font-name
