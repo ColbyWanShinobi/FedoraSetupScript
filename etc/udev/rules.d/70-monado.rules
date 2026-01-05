@@ -1,0 +1,13 @@
+# Oculus Rift S (all device IDs)
+SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0051", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0330", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="2051", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="2052", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="4051", MODE="0660", TAG+="uaccess"
+
+# HTC Vive
+SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", ATTR{idProduct}=="2c87", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="28de", ATTR{idProduct}=="2000", MODE="0660", TAG+="uaccess"
+
+# Valve Index
+SUBSYSTEM=="usb", ATTR{idVendor}=="28de", ATTR{idProduct}=="2012", MODE="0660", TAG+="uaccess"
