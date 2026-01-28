@@ -69,3 +69,7 @@ gsettings set org.gnome.desktop.app-folders folder-children "['System', 'Utiliti
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Games/ name 'Games'
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Games/ categories "['Game']"
 
+gsettings set org.gnome.desktop.interface font-name "SF Pro Display 11"
+gsettings set org.gnome.desktop.interface monospace-font-name "SF Mono 13"
+gsettings set org.gnome.desktop.interface  document-font-name "SF Pro Display 11"
+gsettings set org.gnome.desktop.wm.preferences titlebar-font "SF Pro Display, Bold 11"
